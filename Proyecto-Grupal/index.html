@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>KSI STUDIO</title>
+  <meta name="description" content="Mobiliario sustentable con madera certificada, metales reciclados y fibras naturales.">
+  <meta name="theme-color" content="#1A1A1A">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="ksi-skip" href="#catalogo">Ir al catálogo</a>
+
+  <div class="ksi-app">
+    <header class="ksi-header">
+      <a class="ksi-logo" href="#inicio">KSI STUDIO</a>
+      <button class="ksi-menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+      <nav class="ksi-nav" id="menu" aria-label="Principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#impacto">Impacto</a></li>
+          <li><a href="#consulta">Consulta</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="ksi-hero" aria-labelledby="hero-titulo">
+        <p class="ksi-eyebrow">Mobiliario sustentable</p>
+        <h1 id="hero-titulo">Muebles hechos para durar</h1>
+        <p class="ksi-lead">Madera certificada, metales reciclados y fibras naturales. Cada pieza declara su material y su huella.</p>
+        <ul class="ksi-hero-ods" aria-label="Objetivos de Desarrollo Sostenible">
+          <li><span class="ods-badge" data-ods="12">ODS 12</span> Producción y consumo responsables</li>
+          <li><span class="ods-badge" data-ods="13">ODS 13</span> Acción por el clima</li>
+        </ul>
+        <a class="ksi-btn" href="#catalogo">Ver catálogo</a>
+      </section>
+
+      <section id="catalogo" class="ksi-section" aria-labelledby="catalogo-titulo">
+        <h2 class="ksi-h2" id="catalogo-titulo">Catálogo</h2>
+
+        <div class="ksi-tools">
+          <div class="ksi-tools-row">
+            <div class="ksi-field">
+              <label for="buscar">Buscar</label>
+              <input class="ksi-input" id="buscar" type="search" maxlength="60" autocomplete="off" placeholder="Ej.: roble, aluminio, lino">
+            </div>
+            <div class="ksi-field">
+              <label for="filtro-material">Material</label>
+              <select class="ksi-input" id="filtro-material"></select>
+            </div>
+          </div>
+          <div class="ksi-chips" id="filtros-cat" role="group" aria-label="Categoría"></div>
+          <p class="ksi-cuenta" aria-live="polite">Mostrando <span id="catalogo-cuenta">0 piezas</span></p>
+        </div>
+
+        <ul class="ksi-grid" id="catalogo-grid"></ul>
+        <p class="ksi-vacio" id="catalogo-vacio" hidden>No hay piezas con ese filtro. Cambia la búsqueda o la categoría.</p>
+        <noscript><p class="ksi-vacio">Activa JavaScript para ver el catálogo.</p></noscript>
+      </section>
+
+      <section id="impacto" class="ksi-section" aria-labelledby="impacto-titulo">
+        <div class="ksi-panel">
+          <h2 class="ksi-h2" id="impacto-titulo">Impacto ODS</h2>
+          <ul class="ksi-meters">
+            <li class="ksi-meter" data-meter="huella">
+              <p class="ksi-meter-value">0 %</p>
+              <span class="ksi-meter-track"><span class="ksi-meter-fill"></span></span>
+              <p class="ksi-meter-label">Menos huella de carbono que la fabricación convencional</p>
+            </li>
+            <li class="ksi-meter" data-meter="reciclado">
+              <p class="ksi-meter-value">0 %</p>
+              <span class="ksi-meter-track"><span class="ksi-meter-fill"></span></span>
+              <p class="ksi-meter-label">Contenido reciclado promedio por pieza</p>
+            </li>
+            <li class="ksi-meter" data-meter="reparable">
+              <p class="ksi-meter-value">0 %</p>
+              <span class="ksi-meter-track"><span class="ksi-meter-fill"></span></span>
+              <p class="ksi-meter-label">Piezas reparables y desmontables</p>
+            </li>
+          </ul>
+          <ul class="ksi-ods">
+            <li>
+              <span class="ods-badge" data-ods="12">ODS 12</span>
+              <p class="ksi-ods-name">Producción y consumo responsables</p>
+              <p class="ksi-ods-note">Materiales certificados y piezas pensadas para repararse.</p>
+            </li>
+            <li>
+              <span class="ods-badge" data-ods="13">ODS 13</span>
+              <p class="ksi-ods-name">Acción por el clima</p>
+              <p class="ksi-ods-note">Metales reciclados y menos emisiones por cada mueble.</p>
+            </li>
+            <li>
+              <span class="ods-badge" data-ods="15">ODS 15</span>
+              <p class="ksi-ods-name">Vida de ecosistemas terrestres</p>
+              <p class="ksi-ods-note">Madera de bosques con manejo certificado.</p>
+            </li>
+          </ul>
+          <p class="ksi-nota">Cifras calculadas con los datos de ejemplo del catálogo.</p>
+        </div>
+      </section>
+
+      <section id="consulta" class="ksi-section" aria-labelledby="consulta-titulo">
+        <h2 class="ksi-h2" id="consulta-titulo">Cotizar o consultar</h2>
+        <form class="ksi-form" id="cotizador" novalidate>
+          <div class="ksi-campo" data-campo="nombre">
+            <label for="c-nombre">Nombre completo</label>
+            <div class="ksi-control"><input class="ksi-input" id="c-nombre" name="nombre" type="text" maxlength="60" autocomplete="name" placeholder="María Quispe" aria-describedby="a-nombre"></div>
+            <p class="ksi-ayuda" id="a-nombre">Nombre y apellido. Ej.: María Quispe</p>
+          </div>
+          <div class="ksi-campo" data-campo="correo">
+            <label for="c-correo">Correo electrónico</label>
+            <div class="ksi-control"><input class="ksi-input" id="c-correo" name="correo" type="email" maxlength="80" autocomplete="email" placeholder="maria@correo.com" aria-describedby="a-correo"></div>
+            <p class="ksi-ayuda" id="a-correo">Con @ y dominio. Ej.: maria@correo.com</p>
+          </div>
+          <div class="ksi-campo" data-campo="pieza">
+            <label for="c-pieza">Pieza</label>
+            <div class="ksi-control"><select class="ksi-input" id="c-pieza" name="pieza" aria-describedby="a-pieza"></select></div>
+            <p class="ksi-ayuda" id="a-pieza">Elige una pieza del catálogo.</p>
+          </div>
+          <div class="ksi-campo" data-campo="cantidad">
+            <label for="c-cantidad">Cantidad</label>
+            <div class="ksi-control"><input class="ksi-input" id="c-cantidad" name="cantidad" type="number" inputmode="numeric" min="1" max="50" step="1" placeholder="2" aria-describedby="a-cantidad"></div>
+            <p class="ksi-ayuda" id="a-cantidad">Entre 1 y 50 unidades. Ej.: 2</p>
+          </div>
+          <div class="ksi-campo ksi-campo-ancho" data-campo="mensaje">
+            <label for="c-mensaje">Mensaje <span class="ksi-cuenta-msg" id="cuenta-mensaje">0/200</span></label>
+            <div class="ksi-control"><textarea class="ksi-input" id="c-mensaje" name="mensaje" rows="4" maxlength="260" placeholder="Me interesa la mesa para 6 personas. ¿Cuánto demora la entrega?" aria-describedby="a-mensaje"></textarea></div>
+            <p class="ksi-ayuda" id="a-mensaje">Entre 10 y 200 caracteres.</p>
+          </div>
+          <div class="ksi-form-pie">
+            <p class="ksi-total">Total estimado: <strong id="cot-total">—</strong></p>
+            <button class="ksi-btn" id="cot-enviar" type="submit" disabled>Enviar solicitud</button>
+          </div>
+          <p class="ksi-resultado" id="cot-resultado" role="status" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="ksi-footer">
+      <small>© 2026 KSI STUDIO. Todos los derechos reservados.</small>
+      <a class="ksi-volver" href="#inicio">Volver arriba</a>
+    </footer>
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
