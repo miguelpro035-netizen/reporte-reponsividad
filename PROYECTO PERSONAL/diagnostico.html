@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a1020">
+  <meta name="description" content="Práctica de Event Bubbling, hidratación y diagnóstico HTML/DOM.">
+  <title>Diagnóstico DOM | Miguel Angel</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="diagnostico.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="app.js" defer></script>
+
+<script>
+// Registro del Service Worker PWA (requiere localhost o HTTPS).
+if ("serviceWorker" in navigator) {
+ window.addEventListener("load", function () {
+  navigator.serviceWorker.register("./sw.js")
+   .then(function(reg){ console.log("Service Worker PWA registrado:",reg.scope); })
+   .catch(function(err){ console.error("Error al registrar el Service Worker:",err); });
+ });
+}
+</script>
+</head>
+<body>
+  <main id="diagnosticoApp" class="contenedor">
+    <header class="cabecera">
+      <div>
+        <p class="sobrelinea">DISEÑO WEB II · UPDS</p>
+        <h1>Event Bubbling, Diagnóstico &amp; Offline-First</h1>
+        <p>Práctica de propagación de eventos, hidratación, caché local y funcionamiento sin conexión.</p>
+      </div>
+      <a class="volver" href="index.html">← Volver al portafolio</a>
+    </header>
+
+    <section class="panel">
+      <h2>1. Hidratación de la interfaz</h2>
+      <p>La interfaz comienza en estado estático. Al hidratarla, JavaScript habilita sus interacciones.</p>
+      <div class="fila">
+        <button id="btnDemoHidratar" class="primario" data-hidratado="false">💧 Hidratar interfaz</button>
+        <span id="estadoDemo" class="estado estado-estatico">Estado: ESTÁTICO</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>2. Demostración de Event Bubbling</h2>
+      <p>El contenedor padre tiene un único listener delegado. Los botones agregados dinámicamente también son detectados sin registrar listeners individuales.</p>
+      <div class="fila">
+        <button id="btnAgregarDemo" class="secundario" disabled>+ Agregar elemento dinámico</button>
+      </div>
+      <div id="listaDemo" class="lista-demo">
+        <button class="tarjeta-demo" type="button">Elemento inicial A</button>
+        <button class="tarjeta-demo" type="button">Elemento inicial B</button>
+      </div>
+      <div id="salidaBubbling" class="salida" aria-live="polite">Aquí aparecerá el resultado del evento delegado.</div>
+    </section>
+
+    <section class="panel">
+      <h2>3. Herramienta de diagnóstico HTML/DOM</h2>
+      <p>Pega un fragmento HTML para comprobar la presencia de viewport, IDs duplicados y algunas clases genéricas que pueden generar conflictos.</p>
+      <label for="codigoEntrada">Código HTML para analizar</label>
+      <textarea id="codigoEntrada" rows="9" spellcheck="false" placeholder="Pega aquí tu código HTML..."></textarea>
+      <button id="btnAnalizar" class="primario">Analizar código</button>
+      <div id="resultadoAnalisis" class="resultado" aria-live="polite">
+        <p class="resultado-aviso">El resultado del análisis aparecerá aquí.</p>
+      </div>
+    </section>
+
+    <footer>Diseño Web II · Arquitectura Frontend Avanzada · Miguel Angel</footer>
+  </main>
+</body>
+</html>

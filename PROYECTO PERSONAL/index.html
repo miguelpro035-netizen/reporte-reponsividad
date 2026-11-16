@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Portafolio personal de Miguel Angel Chipana Choque, //Panteras//, estudiante de Ingeniería en Sistemas en UPDS.">
+    <meta name="theme-color" content="#0a1020">
+    <title>Miguel Angel Chipana Choque | //Panteras//</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="app.js" defer></script>
+
+<script>
+// Registro del Service Worker PWA (requiere localhost o HTTPS).
+if ("serviceWorker" in navigator) {
+ window.addEventListener("load", function () {
+  navigator.serviceWorker.register("./sw.js")
+   .then(function(reg){ console.log("Service Worker PWA registrado:",reg.scope); })
+   .catch(function(err){ console.error("Error al registrar el Service Worker:",err); });
+ });
+}
+</script>
+</head>
+<body>
+
+    <!-- FONDO CARRUSEL (se llena con CONFIG.fondos) -->
+    <div id="carrusel" class="carrusel" aria-hidden="true"></div>
+
+    <!-- ENCABEZADO -->
+    <header class="topbar">
+        <button class="avatar" data-abrir="modal-perfil" aria-label="Ver perfil">
+            <img id="avatarImg" src="panter0.jpeg" alt="Imagen de perfil de Miguel Angel">
+        </button>
+        <div class="user">
+            <h1>Miguel Angel</h1>
+            <div class="nivel">
+                <span class="hex"><i class="fa-solid fa-graduation-cap"></i></span>
+                <div class="barra"><span id="barraNivel"></span></div>
+            </div>
+            <small>Ing. en Sistemas</small>
+        </div>
+        <button id="btnTema" class="icon-btn" aria-label="Cambiar tema claro/oscuro"><i class="fa-solid fa-gear"></i></button>
+        <button id="btnMenu" class="icon-btn" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <!-- BOTONES LATERALES -->
+    <aside class="rail">
+        <button data-abrir="modal-voleibol"><span class="circ"><i class="fa-solid fa-futbol"></i></span>Fútbol</button>
+        <button data-abrir="modal-intereses"><span class="circ"><i class="fa-solid fa-laptop-code"></i></span>Intereses</button>
+        <button data-abrir="modal-videojuegos"><span class="circ"><i class="fa-solid fa-gamepad"></i></span>Videojuegos</button>
+    </aside>
+
+    <!-- TEXTO DEL CARRUSEL -->
+    <section id="hero-texto" class="hero-texto" aria-live="polite">
+        <h2 id="capTitulo">¡Hola! Soy Miguel Angel</h2>
+        <p id="capSub">Estudiante de Ingeniería en Sistemas</p>
+        <div id="dots" class="dots"></div>
+    </section>
+
+    <button class="btn-contacto" data-abrir="modal-contacto">
+        <i class="fa-solid fa-paper-plane"></i> CONTACTO
+    </button>
+
+    <!-- PANEL DE REDES (derecha) -->
+    <aside id="dock" class="dock" aria-label="Redes y herramientas">
+        <button id="dockToggle" class="dock-tab" aria-label="Mostrar u ocultar redes" aria-expanded="false">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="dock-panel">
+            <div class="red">
+                <span class="red-ico ig"><i class="fa-brands fa-instagram"></i></span>
+                <div class="red-info"><b>Instagram</b><small class="gem"><i class="fa-solid fa-gem"></i> <span data-red-user="instagram"></span></small>
+                    <small class="ok"><i class="fa-solid fa-circle-check"></i> En línea</small></div>
+                <a class="red-btn verde" data-red="instagram" target="_blank" rel="noopener" aria-label="Abrir Instagram"><i class="fa-solid fa-plus"></i></a>
+            </div>
+            <div class="red">
+                <span class="red-ico gh"><i class="fa-brands fa-github"></i></span>
+                <div class="red-info"><b>GitHub</b><small class="gem"><i class="fa-solid fa-gem"></i> <span data-red-user="github"></span></small>
+                    <small class="oro"><i class="fa-solid fa-code-branch"></i> Repositorios</small></div>
+                <a class="red-btn" data-red="github" target="_blank" rel="noopener" aria-label="Abrir GitHub"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="red">
+                <span class="red-ico xl"><i class="fa-solid fa-file-excel"></i></span>
+                <div class="red-info"><b>Google Sheets</b><small class="gem"><i class="fa-solid fa-gem"></i> Horario semanal</small>
+                    <small class="oro"><i class="fa-solid fa-hourglass-half"></i> Planilla</small></div>
+                <a class="red-btn" data-red="sheets" target="_blank" rel="noopener" aria-label="Abrir Google Sheets"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <div class="red-iconos">
+                <button data-abrir="modal-contacto" aria-label="Contacto"><i class="fa-solid fa-envelope"></i></button>
+                <button data-abrir="modal-musica" aria-label="Música"><i class="fa-solid fa-music"></i></button>
+                <button data-abrir="modal-horario" aria-label="Horario"><i class="fa-solid fa-calendar-days"></i></button>
+            </div>
+
+            <!-- ZONA DE HIDRATACIÓN: HTML estático que JS "hidrata" -->
+            <div class="hidrata">
+                <p class="hidrata-titulo"><i class="fa-solid fa-droplet"></i> Hidratación PWA <span id="estadoHidr">0/2</span></p>
+
+                <!-- Botón de hidratación 1: Menú rápido -->
+                <div id="contenedorMenu" data-hidratado="false">
+                    <button id="btnPWA" class="btn-hidr btn-estatico" type="button">Cargando Menú...</button>
+                    <ul id="navRapido" class="nav-rapido" hidden>
+                        <li><button data-abrir="modal-perfil"><i class="fa-solid fa-user-astronaut"></i> Perfil</button></li>
+                        <li><button data-abrir="modal-videojuegos"><i class="fa-solid fa-gamepad"></i> Videojuegos</button></li>
+                        <li><button data-abrir="modal-horario"><i class="fa-solid fa-calendar-days"></i> Horario</button></li>
+                        <li><button data-abrir="modal-contacto"><i class="fa-solid fa-paper-plane"></i> Contacto</button></li>
+                    </ul>
+                </div>
+
+                <!-- Botón de hidratación 2 (NUEVO): Reproductor -->
+                <div id="contenedorPlayer" data-hidratado="false">
+                    <button id="btnPlayer" class="btn-hidr btn-estatico" type="button">Cargando Reproductor...</button>
+                    <div id="miniPlayer" class="mini-player" hidden>
+                        <p id="mpTitulo" class="mp-titulo">Elige una canción del Top 10</p>
+                        <input id="mpSeek" type="range" min="0" max="100" value="0" aria-label="Progreso de la canción">
+                        <div class="mp-ctrl">
+                            <button id="mpPrev" aria-label="Anterior"><i class="fa-solid fa-backward-step"></i></button>
+                            <button id="mpPlay" class="mp-play" aria-label="Reproducir o pausar"><i class="fa-solid fa-play"></i></button>
+                            <button id="mpNext" aria-label="Siguiente"><i class="fa-solid fa-forward-step"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- NAVEGACIÓN INFERIOR -->
+    <nav class="bottom-nav" aria-label="Navegación principal">
+        <button data-abrir="modal-perfil" data-nav="modal-perfil"><i class="fa-solid fa-user-astronaut"></i>Perfil</button>
+        <button data-abrir="modal-horario" data-nav="modal-horario"><i class="fa-solid fa-calendar-days"></i>Horario</button>
+        <button data-abrir="modal-musica" data-nav="modal-musica"><i class="fa-solid fa-compact-disc"></i>Música</button>
+        <button id="btnRedes" data-nav="redes"><i class="fa-solid fa-share-nodes"></i>Redes</button>
+    </nav>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <div id="drawerFondo" class="drawer-fondo"></div>
+    <nav id="drawer" class="drawer" aria-hidden="true" aria-label="Menú">
+        <div class="drawer-head">
+            <h3><i class="fa-solid fa-compass"></i> Navegación</h3>
+            <button id="btnCerrarDrawer" class="cerrar-x" aria-label="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul>
+            <li><button data-abrir="modal-perfil"><i class="fa-solid fa-user"></i> Inicio / Perfil</button></li>
+            <li><button data-abrir="modal-voleibol"><i class="fa-solid fa-futbol"></i> Fútbol</button></li>
+            <li><button data-abrir="modal-intereses"><i class="fa-solid fa-laptop-code"></i> Intereses</button></li>
+            <li><button data-abrir="modal-videojuegos"><i class="fa-solid fa-gamepad"></i> Videojuegos</button></li>
+            <li><button data-abrir="modal-horario"><i class="fa-solid fa-calendar-days"></i> Horario Semanal</button></li>
+            <li><button data-abrir="modal-musica"><i class="fa-solid fa-music"></i> Música &amp; Top 10</button></li>
+            <li><button data-abrir="modal-contacto"><i class="fa-solid fa-paper-plane"></i> Contacto &amp; Formulario</button></li>
+            <li><a class="enlace-diagnostico" href="diagnostico.html"><i class="fa-solid fa-code"></i> Diagnóstico DOM / PWA</a></li>
+        </ul>
+        <div class="drawer-pie">
+            <button id="btnInstalar" class="btn azul" hidden><i class="fa-solid fa-download"></i> Instalar app</button>
+            <small id="estadoRed">Comprobando conexión...</small>
+        </div>
+    </nav>
+
+    <!-- ========== MODALES ========== -->
+
+    <div class="modal" id="modal-perfil" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-caja">
+            <div class="modal-head"><h3><i class="fa-solid fa-user"></i> ¡HOLA! SOY MIGUEL ANGEL</h3><button class="cerrar-x" data-cerrar aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body">
+                <div class="tarjeta perfil-card">
+                    <img id="perfilImg" src="panter0.jpeg" alt="Miguel Angel Chipana Choque">
+                    <div>
+                        <h4>Miguel Angel Chipana Choque</h4>
+                        <p class="cian">Estudiante de Ingeniería en Sistemas · UPDS | //Panteras//</p>
+                        <p class="suave">Soy una persona curiosa, con ganas de aprender, mejorar mis habilidades y convertir ideas en proyectos. Me interesan la tecnología, el fútbol, la música y los videojuegos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-foot"><button class="btn-cerrar" data-cerrar>Cerrar</button></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-voleibol" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-caja">
+            <div class="modal-head"><h3><i class="fa-solid fa-futbol"></i> DEPORTE FAVORITO</h3><button class="cerrar-x" data-cerrar aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body">
+                <span class="pill azul">Mi deporte favorito</span>
+                <h4 class="titulo-grande">Pasión por el Fútbol</h4>
+                <p>El fútbol es mi deporte favorito. Me gusta la emoción de cada partido, la estrategia, la competencia y el compañerismo que se construye dentro y fuera de la cancha.</p>
+                <p class="cian"><i class="fa-solid fa-circle-check"></i> Valores: disciplina, constancia, respeto, trabajo en equipo y mentalidad ganadora.</p>
+                <img class="img-modal" src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Cancha de fútbol">
+                <h4 class="sub">También me interesa el voleibol</h4><p>Es otra disciplina que exige coordinación, reflejos y colaboración entre compañeros.</p>
+                <img class="img-modal" src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Partido de voleibol">
+            </div>
+            <div class="modal-foot"><button class="btn-cerrar" data-cerrar>Cerrar</button></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-intereses" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-caja">
+            <div class="modal-head"><h3><i class="fa-solid fa-laptop-code"></i> ÁREAS DE INTERÉS</h3><button class="cerrar-x" data-cerrar aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body">
+                <div class="tarjeta">
+                    <h4>Ingeniería en Sistemas</h4>
+                    <p>Formación académica enfocada en desarrollo web, arquitecturas modernas de software, lógica de programación y resolución de problemas tecnológicos con impacto.</p>
+                </div>
+                <div class="tarjeta">
+                    <h4>Dominio del Idioma Inglés</h4>
+                    <p>Práctica y perfeccionamiento constante del idioma inglés para el estudio de tecnologías emergentes, documentación técnica global y proyección profesional internacional.</p>
+                </div>
+                <div class="tarjeta"><h4>Mi filosofía</h4><p class="cian">“No se trata de ser mejor que los demás, sino de ser mejor que ayer.”</p><p>Cada pequeño avance cuenta. La constancia convierte los objetivos en logros.</p></div>
+                <div class="tarjeta"><h4>Mis objetivos</h4><p>Seguir creciendo en Ingeniería en Sistemas, fortalecer mis conocimientos de programación, participar en proyectos creativos y mantener el equilibrio entre estudio, deporte y vida personal.</p></div>
+            </div>
+            <div class="modal-foot"><button class="btn-cerrar" data-cerrar>Cerrar</button></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-videojuegos" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-caja">
+            <div class="modal-head"><h3><i class="fa-solid fa-gamepad"></i> MIS VIDEOJUEGOS</h3><button class="cerrar-x" data-cerrar aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body">
+                <div id="filtroJuegos" class="chips"></div>
+                <div id="listaJuegos"></div>
+            </div>
+            <div class="modal-foot"><button class="btn-cerrar" data-cerrar>Cerrar</button></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-horario" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-caja">
+            <div class="modal-head"><h3><i class="fa-solid fa-calendar-days"></i> HORARIO DE ACTIVIDADES (GOOGLE SHEETS)</h3><button class="cerrar-x" data-cerrar aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body">
+                <p class="centro suave">Planilla de sincronización semanal académica y deportiva:</p>
+                <div class="marco-sheet">
+                    <iframe id="frameHorario" title="Horario en Google Sheets" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="modal-foot"><button class="btn-cerrar" data-cerrar>Cerrar</button></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-musica" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-caja">
+            <div class="modal-head"><h3><i class="fa-solid fa-compact-disc"></i> MÚSICA FAVORITA &amp; TOP 10 CANCIONES</h3><button class="cerrar-x" data-cerrar aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body">
+                <div class="tarjeta oscura">
+                    <h4 class="cian"><i class="fa-solid fa-list-ol"></i> Mi Top 10 Canciones Inmortales</h4>
+                    <ol id="top10Lista" class="lista-top"></ol>
+                </div>
+                <h4 class="cian sub"><i class="fa-solid fa-users"></i> Artistas Favoritos</h4>
+                <div id="filtroArtistas" class="chips"></div>
+                <div id="gridArtistas" class="grid-artistas"></div>
+            </div>
+            <div class="modal-foot"><button class="btn-cerrar" data-cerrar>Cerrar</button></div>
+        </div>
+    </div>
+
+    <!-- Top 10 de un artista (se abre encima de Música) -->
+    <div class="modal alto" id="modal-top10" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-caja">
+            <div class="modal-head"><h3><i class="fa-solid fa-list-ol"></i> <span id="top10Titulo">TOP 10</span></h3><button class="cerrar-x" data-cerrar aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body"><ol id="top10Cuerpo" class="lista-top"></ol></div>
+            <div class="modal-foot"><button class="btn-cerrar" data-cerrar>Volver</button></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-contacto" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-caja">
+            <div class="modal-head"><h3><i class="fa-solid fa-paper-plane"></i> CONTACTO DIRECTO &amp; FORMULARIO</h3><button class="cerrar-x" data-cerrar aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body">
+                <form id="formContacto" novalidate>
+                    <div class="campo"><label for="nombre">Nombre *</label><input id="nombre" type="text" placeholder="Ej: Miguel Angel" autocomplete="given-name"><small class="error"></small></div>
+                    <div class="campo"><label for="apellidos">Apellidos *</label><input id="apellidos" type="text" placeholder="Ej: Quispe Ramos" autocomplete="family-name"><small class="error"></small></div>
+                    <div class="campo"><label for="correo">Correo Electrónico *</label><input id="correo" type="email" placeholder="usuario@correo.com" autocomplete="email"><small class="error"></small></div>
+                    <div class="campo"><label for="telefono">Teléfono / WhatsApp *</label><input id="telefono" type="tel" placeholder="Ej: +591 71234567" autocomplete="tel"><small class="error"></small></div>
+                    <div class="campo"><label for="ciudad">Ciudad / País *</label><input id="ciudad" type="text" placeholder="Ej: La Paz, Bolivia"><small class="error"></small></div>
+                    <div class="campo"><label for="motivo">Motivo *</label>
+                        <select id="motivo">
+                            <option value="">Selecciona...</option>
+                            <option>Consulta académica</option>
+                            <option>Proyecto web</option>
+                            <option>Voleibol / Deporte</option>
+                            <option>Colaboración</option>
+                            <option>Otro</option>
+                        </select><small class="error"></small></div>
+                    <div class="campo"><label for="asunto">Asunto *</label><input id="asunto" type="text" placeholder="Motivo de tu mensaje"><small class="error"></small></div>
+                    <div class="campo"><label for="mensaje">Mensaje Detallado * <span id="contador" class="contador">0/500</span></label>
+                        <textarea id="mensaje" rows="5" maxlength="500" placeholder="Escribe tu mensaje aquí..."></textarea><small class="error"></small></div>
+                    <div class="campo"><label class="check"><input id="acepto" type="checkbox"> <span>Acepto que se usen mis datos para responder a este mensaje. *</span></label><small class="error"></small></div>
+                    <p class="suave chico">* Campos obligatorios</p>
+                    <div class="fila-btn">
+                        <button type="button" id="btnLimpiar" class="btn gris"><i class="fa-solid fa-eraser"></i> Limpiar</button>
+                        <button type="submit" class="btn azul"><i class="fa-solid fa-paper-plane"></i> Enviar Mensaje</button>
+                    </div>
+                    <div id="respuestaForm" class="respuesta" aria-live="polite"></div>
+                </form>
+                <div class="redes-form">
+                    <p class="centro">Redes Sociales &amp; Enlaces</p>
+                    <div class="fila-btn centrada">
+                        <a class="btn rojo" data-red="instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a class="btn negro" data-red="github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a class="btn verde" data-red="sheets" target="_blank" rel="noopener"><i class="fa-solid fa-file-excel"></i> Google Sheets</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-foot"><button class="btn-cerrar" data-cerrar>Cerrar</button></div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
