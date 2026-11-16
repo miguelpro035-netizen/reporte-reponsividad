@@ -1,0 +1,1122 @@
+[
+ {
+  "id": 1,
+  "name": "Blazer Aura",
+  "category": "Abrigos",
+  "style": "Elegante",
+  "price": 245,
+  "oldPrice": 285,
+  "image": "assets/images/blazer-crema.webp",
+  "badge": "DESTACADO",
+  "description": "Blazer de corte clásico en tono crema, ideal para elevar un conjunto de diario.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 8
+ },
+ {
+  "id": 2,
+  "name": "Pantalón Siena",
+  "category": "Pantalones",
+  "style": "Elegante",
+  "price": 185,
+  "oldPrice": 0,
+  "image": "assets/images/pantalon-sastre.webp",
+  "badge": "NUEVO",
+  "description": "Pantalón sastre de caída fluida y silueta atemporal.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 7
+ },
+ {
+  "id": 3,
+  "name": "Blusa Satin Rose",
+  "category": "Blusas",
+  "style": "Elegante",
+  "price": 139,
+  "oldPrice": 159,
+  "image": "assets/images/blusa-satinada.webp",
+  "badge": "-12%",
+  "description": "Blusa satinada rosa con detalles delicados para ocasiones especiales.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 10
+ },
+ {
+  "id": 4,
+  "name": "Jean Midnight",
+  "category": "Pantalones",
+  "style": "Urbano",
+  "price": 199,
+  "oldPrice": 0,
+  "image": "assets/images/jean-oscuro.webp",
+  "badge": "BEST SELLER",
+  "description": "Jean de denim oscuro, versátil y fácil de combinar.",
+  "sizes": [
+   "36",
+   "38",
+   "40",
+   "42"
+  ],
+  "stock": 6
+ },
+ {
+  "id": 5,
+  "name": "Suéter Nube",
+  "category": "Abrigos",
+  "style": "Casual",
+  "price": 169,
+  "oldPrice": 0,
+  "image": "assets/images/sueter-beige.webp",
+  "badge": "NUEVO",
+  "description": "Suéter tejido en tono beige para un look cómodo y sofisticado.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 6,
+  "name": "Vestido Primavera",
+  "category": "Vestidos",
+  "style": "Casual",
+  "price": 215,
+  "oldPrice": 245,
+  "image": "assets/images/vestido-floral.webp",
+  "badge": "-12%",
+  "description": "Vestido floral con silueta femenina y estampado de inspiración romántica.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 4
+ },
+ {
+  "id": 7,
+  "name": "Camisa Essential",
+  "category": "Blusas",
+  "style": "Casual",
+  "price": 125,
+  "oldPrice": 0,
+  "image": "assets/images/camisa-blanca.webp",
+  "badge": "ESENCIAL",
+  "description": "Camisa blanca de líneas limpias, un básico para múltiples combinaciones.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 12
+ },
+ {
+  "id": 8,
+  "name": "Cardigan Bloom",
+  "category": "Abrigos",
+  "style": "Casual",
+  "price": 178,
+  "oldPrice": 0,
+  "image": "assets/images/cardigan-rosa.webp",
+  "badge": "NUEVO",
+  "description": "Cardigan rosa de punto suave con botones frontales.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 9,
+  "name": "Chaqueta Urban",
+  "category": "Abrigos",
+  "style": "Urbano",
+  "price": 289,
+  "oldPrice": 319,
+  "image": "assets/images/chaqueta-cuero.webp",
+  "badge": "-9%",
+  "description": "Chaqueta negra de inspiración urbana con detalles metálicos.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 3
+ },
+ {
+  "id": 10,
+  "name": "Jean Blue Sky",
+  "category": "Pantalones",
+  "style": "Casual",
+  "price": 189,
+  "oldPrice": 0,
+  "image": "assets/images/jean-claro.webp",
+  "badge": "DESTACADO",
+  "description": "Denim azul claro de corte recto para looks relajados.",
+  "sizes": [
+   "36",
+   "38",
+   "40",
+   "42"
+  ],
+  "stock": 9
+ },
+ {
+  "id": 11,
+  "name": "Falda Satin",
+  "category": "Vestidos",
+  "style": "Elegante",
+  "price": 159,
+  "oldPrice": 0,
+  "image": "assets/images/falda-satinada.webp",
+  "badge": "NUEVO",
+  "description": "Falda satinada con movimiento y acabado luminoso.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 6
+ },
+ {
+  "id": 12,
+  "name": "Top Marfil",
+  "category": "Blusas",
+  "style": "Elegante",
+  "price": 115,
+  "oldPrice": 0,
+  "image": "assets/images/top-marfil.webp",
+  "badge": "ESENCIAL",
+  "description": "Top marfil de textura acanalada y diseño delicado.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 8
+ },
+ {
+  "id": 13,
+  "name": "Bolso Camel",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 195,
+  "oldPrice": 0,
+  "image": "assets/images/bolso-camel.webp",
+  "badge": "DESTACADO",
+  "description": "Bolso camel de silueta clásica para complementar tus conjuntos.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 4
+ },
+ {
+  "id": 14,
+  "name": "Bolso Noir",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 220,
+  "oldPrice": 0,
+  "image": "assets/images/bolso-negro.webp",
+  "badge": "NUEVO",
+  "description": "Bolso negro estructurado con herrajes dorados.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 15,
+  "name": "Aros Doré",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 65,
+  "oldPrice": 0,
+  "image": "assets/images/aretes-dorados.webp",
+  "badge": "DETALLE",
+  "description": "Aros dorados de diseño sencillo para dar luz a tu estilo.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 15
+ },
+ {
+  "id": 16,
+  "name": "Sneakers Pure",
+  "category": "Calzado",
+  "style": "Urbano",
+  "price": 235,
+  "oldPrice": 0,
+  "image": "assets/images/zapatillas-blancas.webp",
+  "badge": "NUEVO",
+  "description": "Zapatillas blancas de perfil limpio para un look urbano y cómodo.",
+  "sizes": [
+   "36",
+   "37",
+   "38",
+   "39",
+   "40"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 17,
+  "name": "Blusa Lino Brisa",
+  "category": "Blusas",
+  "style": "Casual",
+  "price": 105,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/blusa-lino-brisa.webp",
+  "badge": "",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 4
+ },
+ {
+  "id": 18,
+  "name": "Blusa Volantes Coral",
+  "category": "Blusas",
+  "style": "Elegante",
+  "price": 75,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/blusa-volantes-coral.webp",
+  "badge": "TENDENCIA",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 4
+ },
+ {
+  "id": 19,
+  "name": "Blusa Lazo Marfil",
+  "category": "Blusas",
+  "style": "Casual",
+  "price": 130,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/blusa-lazo-marfil.webp",
+  "badge": "NUEVO",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 20,
+  "name": "Blusa Rayas Mar",
+  "category": "Blusas",
+  "style": "Elegante",
+  "price": 120,
+  "oldPrice": 150,
+  "image": "assets/images/nuevos/blusa-rayas-mar.webp",
+  "badge": "NUEVO",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 7
+ },
+ {
+  "id": 21,
+  "name": "Blusa Floral Alba",
+  "category": "Blusas",
+  "style": "Casual",
+  "price": 75,
+  "oldPrice": 105,
+  "image": "assets/images/nuevos/blusa-floral-alba.webp",
+  "badge": "NUEVO",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 22,
+  "name": "Blusa Encaje Luna",
+  "category": "Blusas",
+  "style": "Elegante",
+  "price": 95,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/blusa-encaje-luna.webp",
+  "badge": "",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 4
+ },
+ {
+  "id": 23,
+  "name": "Blusa Satén Perla",
+  "category": "Blusas",
+  "style": "Casual",
+  "price": 95,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/blusa-saten-perla.webp",
+  "badge": "NUEVO",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 8
+ },
+ {
+  "id": 24,
+  "name": "Blusa Manga Globo",
+  "category": "Blusas",
+  "style": "Elegante",
+  "price": 120,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/blusa-manga-globo.webp",
+  "badge": "NUEVO",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 8
+ },
+ {
+  "id": 25,
+  "name": "Top Cruzado Sol",
+  "category": "Blusas",
+  "style": "Casual",
+  "price": 135,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/top-cruzado-sol.webp",
+  "badge": "NUEVO",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 7
+ },
+ {
+  "id": 26,
+  "name": "Camisa Oxford Celeste",
+  "category": "Blusas",
+  "style": "Elegante",
+  "price": 110,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/camisa-oxford-celeste.webp",
+  "badge": "NUEVO",
+  "description": "Blusa de corte favorecedor y tela ligera, pensada para combinar con jeans o faldas.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 4
+ },
+ {
+  "id": 27,
+  "name": "Pantalón Palazzo Arena",
+  "category": "Pantalones",
+  "style": "Casual",
+  "price": 175,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/pantalon-palazzo-arena.webp",
+  "badge": "",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 12
+ },
+ {
+  "id": 28,
+  "name": "Jean Recto Índigo",
+  "category": "Pantalones",
+  "style": "Urbano",
+  "price": 150,
+  "oldPrice": 170,
+  "image": "assets/images/nuevos/jean-recto-indigo.webp",
+  "badge": "",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 11
+ },
+ {
+  "id": 29,
+  "name": "Jean Mom Claro",
+  "category": "Pantalones",
+  "style": "Elegante",
+  "price": 140,
+  "oldPrice": 160,
+  "image": "assets/images/nuevos/jean-mom-claro.webp",
+  "badge": "NUEVO",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 6
+ },
+ {
+  "id": 30,
+  "name": "Pantalón Cargo Oliva",
+  "category": "Pantalones",
+  "style": "Casual",
+  "price": 185,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/pantalon-cargo-oliva.webp",
+  "badge": "NUEVO",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 8
+ },
+ {
+  "id": 31,
+  "name": "Pantalón Lino Beige",
+  "category": "Pantalones",
+  "style": "Urbano",
+  "price": 160,
+  "oldPrice": 190,
+  "image": "assets/images/nuevos/pantalon-lino-beige.webp",
+  "badge": "TENDENCIA",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 11
+ },
+ {
+  "id": 32,
+  "name": "Jean Skinny Negro",
+  "category": "Pantalones",
+  "style": "Elegante",
+  "price": 130,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/jean-skinny-negro.webp",
+  "badge": "NUEVO",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 12
+ },
+ {
+  "id": 33,
+  "name": "Pantalón Campana Vino",
+  "category": "Pantalones",
+  "style": "Casual",
+  "price": 150,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/pantalon-campana-vino.webp",
+  "badge": "TENDENCIA",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 6
+ },
+ {
+  "id": 34,
+  "name": "Pantalón Culotte Gris",
+  "category": "Pantalones",
+  "style": "Urbano",
+  "price": 155,
+  "oldPrice": 185,
+  "image": "assets/images/nuevos/pantalon-culotte-gris.webp",
+  "badge": "NUEVO",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 35,
+  "name": "Jogger Urbano Noche",
+  "category": "Pantalones",
+  "style": "Elegante",
+  "price": 190,
+  "oldPrice": 210,
+  "image": "assets/images/nuevos/jogger-urbano-noche.webp",
+  "badge": "TENDENCIA",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 9
+ },
+ {
+  "id": 36,
+  "name": "Pantalón Pinzas Crema",
+  "category": "Pantalones",
+  "style": "Casual",
+  "price": 170,
+  "oldPrice": 200,
+  "image": "assets/images/nuevos/pantalon-pinzas-crema.webp",
+  "badge": "",
+  "description": "Pantalón de cintura cómoda y caída limpia para el día a día.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 37,
+  "name": "Chaqueta Denim Azul",
+  "category": "Abrigos",
+  "style": "Elegante",
+  "price": 205,
+  "oldPrice": 225,
+  "image": "assets/images/nuevos/chaqueta-denim-azul.webp",
+  "badge": "",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 38,
+  "name": "Abrigo Largo Camel",
+  "category": "Abrigos",
+  "style": "Urbano",
+  "price": 190,
+  "oldPrice": 210,
+  "image": "assets/images/nuevos/abrigo-largo-camel.webp",
+  "badge": "",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 8
+ },
+ {
+  "id": 39,
+  "name": "Cardigan Tejido Nube",
+  "category": "Abrigos",
+  "style": "Casual",
+  "price": 355,
+  "oldPrice": 375,
+  "image": "assets/images/nuevos/cardigan-tejido-nube.webp",
+  "badge": "NUEVO",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 11
+ },
+ {
+  "id": 40,
+  "name": "Blazer Cuadros Gris",
+  "category": "Abrigos",
+  "style": "Elegante",
+  "price": 340,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/blazer-cuadros-gris.webp",
+  "badge": "NUEVO",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 11
+ },
+ {
+  "id": 41,
+  "name": "Chaleco Acolchado Rosa",
+  "category": "Abrigos",
+  "style": "Urbano",
+  "price": 190,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/chaleco-acolchado-rosa.webp",
+  "badge": "TENDENCIA",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 6
+ },
+ {
+  "id": 42,
+  "name": "Parka Ligera Verde",
+  "category": "Abrigos",
+  "style": "Casual",
+  "price": 285,
+  "oldPrice": 315,
+  "image": "assets/images/nuevos/parka-ligera-verde.webp",
+  "badge": "",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 11
+ },
+ {
+  "id": 43,
+  "name": "Saco Bouclé Marfil",
+  "category": "Abrigos",
+  "style": "Elegante",
+  "price": 200,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/saco-boucle-marfil.webp",
+  "badge": "",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 10
+ },
+ {
+  "id": 44,
+  "name": "Chaqueta Bomber Negra",
+  "category": "Abrigos",
+  "style": "Urbano",
+  "price": 300,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/chaqueta-bomber-negra.webp",
+  "badge": "",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 12
+ },
+ {
+  "id": 45,
+  "name": "Poncho Andino Terra",
+  "category": "Abrigos",
+  "style": "Casual",
+  "price": 300,
+  "oldPrice": 330,
+  "image": "assets/images/nuevos/poncho-andino-terra.webp",
+  "badge": "TENDENCIA",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 10
+ },
+ {
+  "id": 46,
+  "name": "Gabardina Clásica Arena",
+  "category": "Abrigos",
+  "style": "Elegante",
+  "price": 280,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/gabardina-clasica-arena.webp",
+  "badge": "NUEVO",
+  "description": "Abrigo versátil para las mañanas frías de La Paz, de ajuste cómodo.",
+  "sizes": [
+   "S",
+   "M",
+   "L"
+  ],
+  "stock": 6
+ },
+ {
+  "id": 47,
+  "name": "Collar Perlas Aura",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 65,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/collar-perlas-aura.webp",
+  "badge": "NUEVO",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 4
+ },
+ {
+  "id": 48,
+  "name": "Aretes Aro Dorado",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 150,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/aretes-aro-dorado.webp",
+  "badge": "TENDENCIA",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 8
+ },
+ {
+  "id": 49,
+  "name": "Pulsera Charms",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 25,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/pulsera-charms.webp",
+  "badge": "",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 12
+ },
+ {
+  "id": 50,
+  "name": "Cinturón Trenzado",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 120,
+  "oldPrice": 140,
+  "image": "assets/images/nuevos/cinturon-trenzado.webp",
+  "badge": "NUEVO",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 12
+ },
+ {
+  "id": 51,
+  "name": "Bufanda Alpaca Rosa",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 185,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/bufanda-alpaca-rosa.webp",
+  "badge": "",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 12
+ },
+ {
+  "id": 52,
+  "name": "Gorro Lana Crema",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 125,
+  "oldPrice": 155,
+  "image": "assets/images/nuevos/gorro-lana-crema.webp",
+  "badge": "",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 10
+ },
+ {
+  "id": 53,
+  "name": "Bolso Tote Miel",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 50,
+  "oldPrice": 80,
+  "image": "assets/images/nuevos/bolso-tote-miel.webp",
+  "badge": "",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 4
+ },
+ {
+  "id": 54,
+  "name": "Cartera Mini Noche",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 75,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/cartera-mini-noche.webp",
+  "badge": "NUEVO",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 11
+ },
+ {
+  "id": 55,
+  "name": "Lentes Retro Carey",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 65,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/lentes-retro-carey.webp",
+  "badge": "TENDENCIA",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 4
+ },
+ {
+  "id": 56,
+  "name": "Set Pasadores Perla",
+  "category": "Accesorios",
+  "style": "Accesorio",
+  "price": 50,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/set-pasadores-perla.webp",
+  "badge": "NUEVO",
+  "description": "Accesorio de detalle fino para completar tu look.",
+  "sizes": [
+   "Única"
+  ],
+  "stock": 12
+ },
+ {
+  "id": 57,
+  "name": "Zapatilla Urbana Blanca",
+  "category": "Calzado",
+  "style": "Casual",
+  "price": 145,
+  "oldPrice": 165,
+  "image": "assets/images/nuevos/zapatilla-urbana-blanca.webp",
+  "badge": "NUEVO",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 58,
+  "name": "Botín Cuero Café",
+  "category": "Calzado",
+  "style": "Urbano",
+  "price": 175,
+  "oldPrice": 205,
+  "image": "assets/images/nuevos/botin-cuero-cafe.webp",
+  "badge": "NUEVO",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 8
+ },
+ {
+  "id": 59,
+  "name": "Sandalia Tiras Dorada",
+  "category": "Calzado",
+  "style": "Elegante",
+  "price": 210,
+  "oldPrice": 230,
+  "image": "assets/images/nuevos/sandalia-tiras-dorada.webp",
+  "badge": "",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 5
+ },
+ {
+  "id": 60,
+  "name": "Mocasín Clásico Negro",
+  "category": "Calzado",
+  "style": "Casual",
+  "price": 150,
+  "oldPrice": 180,
+  "image": "assets/images/nuevos/mocasin-clasico-negro.webp",
+  "badge": "",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 11
+ },
+ {
+  "id": 61,
+  "name": "Tacón Bloque Nude",
+  "category": "Calzado",
+  "style": "Urbano",
+  "price": 245,
+  "oldPrice": 265,
+  "image": "assets/images/nuevos/tacon-bloque-nude.webp",
+  "badge": "NUEVO",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 6
+ },
+ {
+  "id": 62,
+  "name": "Bota Caña Alta",
+  "category": "Calzado",
+  "style": "Elegante",
+  "price": 145,
+  "oldPrice": 165,
+  "image": "assets/images/nuevos/bota-cana-alta.webp",
+  "badge": "TENDENCIA",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 11
+ },
+ {
+  "id": 63,
+  "name": "Ballerina Satén",
+  "category": "Calzado",
+  "style": "Casual",
+  "price": 295,
+  "oldPrice": 0,
+  "image": "assets/images/nuevos/ballerina-saten.webp",
+  "badge": "NUEVO",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 7
+ },
+ {
+  "id": 64,
+  "name": "Plataforma Casual",
+  "category": "Calzado",
+  "style": "Urbano",
+  "price": 255,
+  "oldPrice": 275,
+  "image": "assets/images/nuevos/plataforma-casual.webp",
+  "badge": "NUEVO",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 12
+ },
+ {
+  "id": 65,
+  "name": "Zapato Oxford Vino",
+  "category": "Calzado",
+  "style": "Elegante",
+  "price": 125,
+  "oldPrice": 145,
+  "image": "assets/images/nuevos/zapato-oxford-vino.webp",
+  "badge": "NUEVO",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 8
+ },
+ {
+  "id": 66,
+  "name": "Alpargata Yute",
+  "category": "Calzado",
+  "style": "Casual",
+  "price": 250,
+  "oldPrice": 270,
+  "image": "assets/images/nuevos/alpargata-yute.webp",
+  "badge": "NUEVO",
+  "description": "Calzado cómodo con suela estable, hecho para caminar la ciudad.",
+  "sizes": [
+   "35",
+   "36",
+   "37",
+   "38",
+   "39"
+  ],
+  "stock": 9
+ }
+]

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="V&C Boutique La Paz — moda femenina, prendas seleccionadas y accesorios.">
+  <meta name="theme-color" content="#c94f83">
+  <meta name="color-scheme" content="light dark">
+  <title>V&C BOUTIQUE | LA PAZ</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span>ENVÍOS EN LA PAZ</span><span>·</span><span>ESTILO QUE HABLA POR TI</span><span>·</span><span>CONSULTAS POR WHATSAPP</span></div>
+  <div class="app-shell" id="appShell">
+    <header class="site-header">
+      <button class="icon-button menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <a class="brand" href="#inicio" aria-label="V&C Boutique inicio"><span class="brand-mark">V<span>&</span>C</span><span class="brand-copy">BOUTIQUE <small>LA PAZ · BOLIVIA</small></span></a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#catalogo">NUEVA COLECCIÓN</a><a href="#categorias">CATEGORÍAS</a><a href="#nosotros">LA BOUTIQUE</a><a href="#contacto">CONTACTO</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeBtn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">◐</button>
+        <button class="icon-button" id="searchFocus" aria-label="Buscar">⌕</button>
+        <button class="icon-button account-open" aria-label="Mi cuenta">♙</button>
+        <button class="icon-button cart-open" aria-label="Abrir carrito">♧<span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+      <a href="#catalogo">Nueva colección</a><a href="#categorias">Categorías</a><a href="#nosotros">La boutique</a><a href="#contacto">Contacto</a>
+    </nav>
+
+    <main id="inicio">
+      <section class="hero" aria-label="Colección de temporada">
+        <div class="hero-copy"><p class="eyebrow">COLECCIÓN · 2026</p><h1>Tu estilo,<br><em>tu esencia.</em></h1><p class="hero-description">Piezas seleccionadas para acompañarte en cada momento. Descubre una forma diferente de vestir.</p><a class="button button-dark" href="#catalogo">EXPLORAR COLECCIÓN <span>↗</span></a><div class="hero-note">VESTIR BIEN ES SENTIRSE BIEN <span>— V&C</span></div></div>
+        <div class="hero-visual"><img src="assets/images/vestido-floral.webp" alt="Vestido floral de la colección V&C" fetchpriority="high"><div class="hero-stamp">V&C<br><small>NEW<br>SEASON</small></div><div class="hero-side-label">LA PAZ · BOLIVIA</div></div>
+      </section>
+
+      <section class="trust-strip" aria-label="Ventajas de compra"><div><b>01</b><span>SELECCIÓN<br><small>Prendas elegidas</small></span></div><div><b>02</b><span>ATENCIÓN<br><small>Asesoría cercana</small></span></div><div><b>03</b><span>ENTREGAS<br><small>La Paz y alrededores</small></span></div></section>
+
+      <section class="category-section section-pad" id="categorias">
+        <div class="section-heading"><div><p class="eyebrow">ENCUENTRA TU FAVORITO</p><h2>Compra por <em>categoría</em></h2></div><a class="text-link" href="#catalogo">VER TODO ↗</a></div>
+        <div class="story-carousel" id="storyCarousel" aria-label="Categorías destacadas"><button class="carousel-arrow" type="button" data-dir="-1" aria-label="Anterior">‹</button><div class="story-track" id="storyTrack"></div><button class="carousel-arrow" type="button" data-dir="1" aria-label="Siguiente">›</button></div>
+        <div class="category-pills" id="categoryPills">
+          <button class="category-pill is-active" data-category="Todos">Todo <span>16</span></button><button class="category-pill" data-category="Blusas">Blusas</button><button class="category-pill" data-category="Pantalones">Pantalones</button><button class="category-pill" data-category="Vestidos">Vestidos</button><button class="category-pill" data-category="Abrigos">Abrigos</button><button class="category-pill" data-category="Accesorios">Accesorios</button><button class="category-pill" data-category="Calzado">Calzado</button>
+        </div>
+        <div class="cascade-filter" id="filtros"><h3>FILTRO DINÁMICO DE 3 CAPAS <span id="temaIcono" aria-hidden="true">✦</span></h3><select id="capa1" aria-label="Capa 1: categoría"><option value="">-- Elija categoría --</option><option>Blusas</option><option>Pantalones</option><option>Vestidos</option><option>Abrigos</option><option>Accesorios</option><option>Calzado</option></select><select id="capa2" disabled aria-label="Capa 2: estilo"><option value="">-- Primero elija categoría --</option></select><div id="resultadoFiltro" class="cascade-result" aria-live="polite">Seleccione las capas anteriores...</div></div>
+      </section>
+
+      <section class="catalog-section section-pad" id="catalogo">
+        <div class="section-heading catalog-heading"><div><p class="eyebrow">HECHO PARA DESTACAR</p><h2>Nuestra <em>selección</em></h2><p class="muted" id="catalogStatus" aria-live="polite">Preparando colección...</p></div><div class="catalog-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar prendas..." aria-label="Buscar prendas"></label><select id="sortSelect" aria-label="Ordenar productos"><option value="featured">Destacados</option><option value="price-asc">Precio: menor a mayor</option><option value="price-desc">Precio: mayor a menor</option><option value="name">Nombre A–Z</option></select></div></div>
+        <div class="filter-row"><div class="filter-caption">FILTROS <span>·</span> <span id="resultCount">16 productos</span></div><div class="filter-selects"><select id="styleFilter" aria-label="Filtrar estilo"><option value="">Todos los estilos</option><option value="Casual">Casual</option><option value="Elegante">Elegante</option><option value="Urbano">Urbano</option><option value="Accesorio">Accesorios</option></select><select id="priceFilter" aria-label="Filtrar precio"><option value="">Cualquier precio</option><option value="low">Hasta Bs 100</option><option value="mid">Bs 101–200</option><option value="high">Más de Bs 200</option></select></div></div>
+        <div class="product-grid" id="productGrid" aria-live="polite"><div class="loading-card">Cargando colección V&C...</div></div>
+        <div class="empty-state" id="emptyState" hidden><span>♡</span><h3>No encontramos esa prenda</h3><p>Prueba con otra búsqueda o cambia los filtros.</p><button class="button button-outline" id="clearFilters">LIMPIAR FILTROS</button></div>
+      </section>
+
+      <section class="live-section section-pad" id="liveContainer">
+        <div class="live-card"><div class="live-content"><p class="eyebrow light-eyebrow"><span class="live-dot"></span> V&C EN VIVO · SELECCIÓN ESPECIAL</p><h2>Un detalle que<br><em>lo cambia todo.</em></h2><p>Descubre nuestras piezas destacadas y consulta disponibilidad directamente con la boutique.</p><div class="live-actions"><button class="button button-light" id="liveShopBtn" data-action="live-shop">VER DESTACADOS ↗</button><button class="like-live" id="liveLike" data-action="like" aria-label="Me gusta">♡ <span id="likeCount">24</span></button></div></div><div class="live-products" id="liveProducts"></div></div>
+        <div class="live-audit"><div class="audit-heading"><span>BITÁCORA DE ACTIVIDAD</span><span class="live-dot"></span></div><div class="audit-log" id="eventLog" aria-live="polite"><p>[Sistema] Boutique lista para recibirte.</p></div><div class="live-chat"><input id="liveChatInput" type="text" maxlength="120" placeholder="Escribe una consulta..." aria-label="Escribir consulta al live"><button id="sendLiveChat" class="button button-dark">ENVIAR</button></div></div>
+      </section>
+
+      <section class="reserve-section section-pad" id="apartado"><div class="section-heading"><div><p class="eyebrow">RESERVA SEGURA</p><h2>Aparta tu <em>prenda</em></h2></div></div><div class="reserve-grid"><section class="modulo-reservas"><h3>Apartado en boutique</h3><form id="formReserva"><input type="text" id="clienteNombre" placeholder="Nombre o grupo" maxlength="60" required aria-label="Nombre del cliente"><select id="prendaSelect" aria-label="Prenda a apartar"><option>Cargando prendas...</option></select><select id="horarioSelect" aria-label="Horario de visita"><option value="10:00">Hoy 10:00</option><option value="15:30">Hoy 15:30</option><option value="18:00">Hoy 18:00</option></select><button type="submit" class="button button-dark">CONFIRMAR APARTADO</button></form><ul id="listaReservas" class="lista-segura"></ul></section><section class="cola-deseos"><h3>Mi lista de deseos</h3><div class="deseos-input"><input type="text" id="inputDeseo" maxlength="80" placeholder="Anota una prenda o talla..." aria-label="Agregar deseo"><button id="btnPedir" class="btn-tactil" type="button">+ Añadir</button></div><div id="listaDeseos"></div></section></div></section>
+
+      <section class="story-section section-pad" id="nosotros"><div class="story-image"><img src="assets/images/blazer-crema.webp" alt="Blazer de la selección V&C" loading="lazy"></div><div class="story-copy"><p class="eyebrow">SOMOS V&C BOUTIQUE</p><h2>Detalles que<br><em>hablan de ti.</em></h2><p>Somos una boutique en La Paz que reúne prendas y accesorios pensados para combinar comodidad, personalidad y elegancia. Queremos que cada elección se sienta tuya.</p><a class="text-link" href="#contacto">CONOCE MÁS ↗</a></div></section>
+
+      <section class="service-section section-pad"><div class="section-heading"><div><p class="eyebrow">UNA COMPRA MÁS SIMPLE</p><h2>Tu experiencia <em>V&C</em></h2></div></div><div class="service-grid"><article><span>✦</span><h3>Asesoría personalizada</h3><p>Te ayudamos a elegir tu próxima prenda.</p></article><article><span>⌂</span><h3>Entrega coordinada</h3><p>Consulta opciones de entrega en La Paz.</p></article><article><span>♡</span><h3>Selección especial</h3><p>Un catálogo cuidado para cada ocasión.</p></article></div><div class="accordion-wrap"><button class="accordion-btn" type="button" aria-expanded="false">＋ Ver detalles del servicio</button><div class="accordion-panel" style="display:none">Coordinamos disponibilidad, talla y entrega en La Paz antes de confirmar tu solicitud. El pago y la entrega se acuerdan directamente con la boutique.</div></div></section>
+
+      <section class="contact-section section-pad" id="contacto"><div class="contact-copy"><p class="eyebrow">HABLEMOS</p><h2>Estamos para<br><em>ayudarte.</em></h2><p>Déjanos tus datos y tu consulta. Te mostraremos una confirmación en pantalla para que puedas continuar con la boutique.</p><div class="contact-details"><span>LA PAZ · BOLIVIA</span><span>ATENCIÓN PERSONALIZADA</span></div></div><form class="contact-form" id="contactForm" novalidate><label>Nombre completo<input id="contactName" name="name" type="text" placeholder="Tu nombre" required minlength="2"><small class="field-error" id="nameError"></small></label><label>Correo electrónico<input id="contactEmail" name="email" type="email" placeholder="nombre@correo.com" required><small class="field-error" id="emailError"></small></label><label>Tu mensaje<textarea id="contactMessage" name="message" rows="4" placeholder="¿En qué podemos ayudarte?" required minlength="8"></textarea><small class="field-error" id="messageError"></small></label><button class="button button-dark" type="submit">ENVIAR CONSULTA ↗</button><p class="form-feedback" id="contactFeedback" aria-live="polite"></p><div class="success-alert" id="successAlert" role="status" style="display:none">¡Consulta enviada con éxito!</div></form></section>
+    </main>
+
+    <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">V<span>&</span>C</span><span class="brand-copy">BOUTIQUE <small>LA PAZ · BOLIVIA</small></span></a><p>Moda con identidad. Estilo con intención.</p><div class="footer-bottom"><span>© 2026 V&C BOUTIQUE</span><span>PROYECTO ACADÉMICO · DISEÑO WEB II</span><a href="lab-jquery/">LAB-JQUERY ↗</a><button class="frame-toggle" id="phoneBtn" type="button">VISTA CELULAR ▯</button></div></footer>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true"><div class="drawer-header"><div><p class="eyebrow">TU SELECCIÓN</p><h2>Mi carrito <span id="drawerCount">(0)</span></h2></div><button class="close-button" data-close-drawer aria-label="Cerrar carrito">×</button></div><div class="cart-items" id="cartItems"><div class="cart-empty">Tu carrito está esperando su primera elección ♡</div></div><div class="cart-summary"><div><span>Subtotal</span><strong id="cartSubtotal">Bs 0</strong></div><p>El costo de entrega se coordina al confirmar el pedido.</p><button class="button button-dark button-full" id="checkoutBtn">CONTINUAR PEDIDO ↗</button><button class="button button-outline button-full" data-close-drawer>SEGUIR COMPRANDO</button></div></aside>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden></div>
+  <section class="modal" id="accountModal" role="dialog" aria-modal="true" aria-labelledby="accountTitle" hidden><button class="close-button modal-close" data-close-modal aria-label="Cerrar">×</button><p class="eyebrow">BIENVENIDA A V&C</p><h2 id="accountTitle">Tu espacio <em>personal.</em></h2><p>Registra tus datos para preparar tu pedido. Esta demostración guarda la información localmente en tu navegador.</p><form id="accountForm"><label>Nombre<input id="accountName" required minlength="2" placeholder="Tu nombre"></label><label>Correo<input id="accountEmail" type="email" required placeholder="correo@ejemplo.com"></label><button class="button button-dark button-full" type="submit">GUARDAR MI PERFIL</button></form><p class="form-feedback" id="accountFeedback" aria-live="polite"></p></section>
+
+  <section class="modal product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="productModalTitle" hidden><button class="close-button modal-close" data-close-modal aria-label="Cerrar">×</button><div id="productModalContent"></div></section>
+
+  <section class="modal checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" hidden><button class="close-button modal-close" data-close-modal aria-label="Cerrar">×</button><p class="eyebrow">ÚLTIMO PASO</p><h2 id="checkoutTitle">Confirma tu <em>pedido.</em></h2><p>Revisa los datos de tu solicitud. El pedido se registra en esta demostración y queda pendiente de coordinación con la boutique.</p><form id="checkoutForm"><label>Nombre del cliente<input id="checkoutName" required placeholder="Nombre completo"></label><label>Teléfono / WhatsApp<input id="checkoutPhone" required inputmode="tel" pattern="[0-9+() -]{7,}" placeholder="Ej. 7XXXXXXX"></label><label>Forma de entrega<select id="deliverySelect"><option value="Coordinar entrega en La Paz">Coordinar entrega en La Paz</option><option value="Recojo coordinado">Recojo coordinado</option></select></label><label>Nota adicional<textarea id="checkoutNote" rows="2" placeholder="Talla, color o consulta adicional"></textarea></label><div class="order-summary" id="orderSummary" aria-label="Resumen del pedido"></div><div class="checkout-total"><span>Total estimado</span><strong id="checkoutTotal">Bs 0</strong></div><p class="countdown-label">Tiempo para confirmar: <strong id="countdown">00:30</strong></p><div class="modal-actions"><button class="button button-outline" type="button" data-close-modal>CANCELAR</button><button class="button button-dark" type="submit">CONFIRMAR PEDIDO</button></div></form></section>
+
+  <div class="phone-overlay" id="phoneOverlay" hidden><button class="phone-close" id="phoneClose" type="button" aria-label="Cerrar vista celular">×</button><div class="phone-device"></div></div>
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <div class="network-status" id="networkStatus" role="status">● EN LÍNEA</div>
+</body>
+</html>
