@@ -1,0 +1,46 @@
+PROYECTO PWA OFFLINE-FIRST - MIGUEL ANGEL
+
+SEIS ARCHIVOS PRINCIPALES:
+1. index.html
+2. diagnostico.html
+3. styles.css
+4. diagnostico.css
+5. app.js
+6. sw.js
+
+ARCHIVOS ADICIONALES:
+manifest.json (configuración de instalación), icon.svg e imágenes panter0.jpeg a panter3.jpeg.
+
+ACTUALIZACIONES DE LA GUÍA:
+- Enfoque Offline-First.
+- Cache Storage para recursos estáticos: caché primero.
+- HTML: red primero y copia de caché como respaldo.
+- Registro del Service Worker dentro de index.html y diagnostico.html.
+- Manifest con nombre, icono, start_url, colores, standalone y orientación portrait.
+- Indicador visual online/offline.
+- Cola local de mensajes de contacto y reintento al recuperar internet.
+- Solicitud de Background Sync cuando el navegador lo soporta.
+
+IMPORTANTE:
+El proyecto no incluye un servidor/backend ni una URL real para recibir formularios. Para que los mensajes pendientes se envíen automáticamente, configura C.formEndpoint en app.js con un endpoint propio que acepte POST JSON. Sin endpoint, el formulario conserva el comportamiento mailto cuando hay conexión; sin conexión puede guardar el mensaje localmente, pero no enviarlo a un servidor inexistente.
+
+PRUEBA:
+1. Abrir la carpeta con Visual Studio Code y Live Server (localhost) o publicarla mediante HTTPS.
+2. Cargar una vez con internet para que el Service Worker almacene los recursos.
+3. En DevTools > Application > Service Workers comprobar el registro.
+4. En DevTools > Network activar Offline y recargar.
+5. Volver a Online para comprobar el indicador y el reintento de sincronización.
+
+Cache Storage almacena archivos estáticos; localStorage conserva la cola del formulario. Los archivos deben estar en la misma carpeta.
+
+
+PERSONALIZACIÓN //PANTERAS// (noviembre 2026):
+- Nombre: Miguel Angel Chipana Choque. Apodo: //Panteras//.
+- Carrera: Ingeniería en Sistemas, UPDS.
+- Deporte principal actualizado a fútbol; voleibol queda como interés adicional.
+- Redes configuradas con los enlaces proporcionados por Miguel Angel.
+- Top 10 y canciones de artistas abren búsquedas directas en YouTube al seleccionarlas.
+- Se añadieron juegos, imágenes remotas temáticas, objetivos y una frase motivadora.
+- Horario_Miguel_Angel.xlsx es una plantilla editable. Para convertirla en Google Sheets: subir el archivo a Google Drive, abrirlo con Hojas de cálculo de Google y usar Compartir > Copiar enlace. Para incrustarlo en la web, pegar el enlace de publicación/insertar en CONFIG.redes.sheets.embed de app.js y el enlace compartible en CONFIG.redes.sheets.url.
+- El horario está como plantilla porque no se proporcionaron horas reales de clases.
+- Las imágenes y enlaces externos requieren conexión a internet; el contenido local principal mantiene el modo PWA.
